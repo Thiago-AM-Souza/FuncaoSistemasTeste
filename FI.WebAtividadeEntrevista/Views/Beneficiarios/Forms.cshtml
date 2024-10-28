@@ -1,0 +1,40 @@
+﻿@model WebAtividadeEntrevista.Models.ClienteModel
+
+<div class="modal fade" id="beneficiariosModal" tabindex="-1" role="dialog" aria-labelledby="beneficiariosModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between">
+                <h5 class="modal-title" id="beneficiariosModalLabel">Beneficiários</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body m-2">
+                <form class="form-inline">
+                    <div class="form-group mb-2">
+                        <label for="AddBenefCpf">CPF</label>
+                        <input required="required" type="text" class="form-control" id="AddBenefCpf" placeholder="Ex.: 010.011.111-00">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="AddBenefNome">Nome</label>
+                        <input required="required" type="text" class="form-control" id="AddBenefNome" placeholder="Ex.: Maria">
+                    </div>
+                    <div class="form-group d-flex align-items-end">
+                        <button type="submit" id="btnAddBenef" class="btn btn-success">Incluir</button>
+                    </div>
+                </form>
+                <table id="gridBeneficiarios" class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th>CPF</th>
+                            <th>Nome</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
